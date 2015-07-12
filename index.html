@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+      <!--
+        <section data-markdown>
+          <script type="text/template">
+
+          </script>
+        </section>
+      -->
+        <section>
+          <section data-markdown>
+            ## Angular 2,
+            a framework for superheroes
+
+            (someday)
+          </section>
+          <section data-markdown>
+            ### Disclaimer
+            ![](images/caution.gif)
+          </section>
+          <section data-markdown>
+            ### Disclaimer #2
+            ![](images/time.jpg)
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ![](images/angular1.png)
+            # ?
+          </section>
+
+          <section data-markdown>
+            - data binding
+            - add html behavior
+            - create html tags
+          </section>
+
+          <section data-markdown>
+            ![](images/popular.gif)
+          </section>
+
+          <section data-markdown>
+            ### Much fun
+          </section>
+
+        </section>
+
+        <section>
+          <section data-markdown>
+            Problems with Angular 1.x
+          </section>
+          <section data-markdown>
+            It can be slow
+          </section>
+          <section data-markdown>
+            Angular != Web Components
+          </section>
+          <section data-markdown>
+            Complexity
+          </section>
+          <section data-markdown>
+            ![](images/feelings_about_angularjs_over_time.png)
+          </section>
+          <section data-markdown>
+            Router = no bueno
+          </section>
+        </section>
+
+        <section>
+          <section data-markdown>
+            ## Angular 2?
+            ![](images/angular2.png)
+          </section>
+          <section>
+            <h2>Ng-Europe 2014</h2>
+            <div>
+              <span style="padding-right:20px">Angular 1.x </span><span style="color:red; padding-right:20px">==X=></span> Angular 2
+            </div>
+          </section>
+          <section>
+            <img src="images/rip.png" width="600">
+          </section>
+          <section data-markdown>
+            AtScript
+          </section>
+          <section data-markdown>
+            ![](images/panic.gif)
+          </section>
+          <section data-markdown>
+            ng-conf 2015
+            - Public deisgn docs
+            - Migration path
+            - TypeScript
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            What's great about Angular 2
+          </section>
+          <section data-markdown>
+            But first, [demo app](http://0.0.0.0:8080/)
+          </section>
+          <section data-markdown>
+            ### Angular 1.x concepts
+              Controller
+
+              Template
+
+              Directives
+
+              Model
+
+              Scope
+
+              Expressions
+
+              View
+
+              Module
+
+              Service
+
+          </section>
+          <section data-markdown>
+            ### Angular 2 concepts
+              services
+
+              components
+
+              views
+          </section>
+          <section data-markdown>
+            ### How to make a component
+            ```
+            @Component({
+              // specify selector and dependencies
+            })
+
+            @View({
+              // specify template
+            })
+
+            class TitleComponent {
+              // make object that controls component
+            }
+
+            ```
+          </section>
+          <section data-markdown>
+            Event binding
+            ```
+              &lt;tag (eventName)="fnToCall()"&gt;&lt;/tag&gt;
+            ```
+          </section>
+          <section data-markdown>
+            Module loader (System.js)
+            ```
+            var dependencies = [
+              ...
+            ]
+            dependencies.forEach(function(dependency){
+              System.import(dependency);
+            });
+            ```
+            And in each dependency
+            ```
+            bootstrap(NameOfComponent);
+            ```
+          </section>
+          <section data-markdown>
+            No need for "$scope"!
+            ```
+              &lt;h1 &gt;{{propertyOnComponent}}&lt;/h1&gt;
+            ```
+          </section>
+          <section data-markdown>
+            Dynamic html properties
+            ```
+              &lt;img [src]="selectedMember.avatar_url"&gt;&lt;/img&gt;
+            ```
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            What's not great about Angular 2
+          </section>
+          <section data-markdown>
+            Migration with new router
+          </section>
+          <section data-markdown>
+            Dependencies need to migrate
+          </section>
+          <section data-markdown>
+            Resources are jumbled
+          </section>
+          <section data-markdown>
+            Hard to get sneak peek
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## Conclusion
+            Cool! Eventually...
+          </section>
+          <section data-markdown>
+            #### How to learn more
+            - Best [starter code](https://github.com/angular-class/angular2-webpack-starter)
+            - Best [blog post](http://angular-tips.com/blog/2015/06/why-will-angular-2-rock/)
+            - Step by step [guide](https://angular.io/docs/js/latest/guide/) (2.0.0-alpha.22)
+            - [Glossary](https://www.youtube.com/watch?v=YhcOeJP06Zc) from ng-Vegas
+            - [ng-conf 2015 keynote](https://www.youtube.com/watch?v=-dMBcqwvYA0&index=21&list=PLOETEcp3DkCoNnlhE-7fovYvqwVPrRiY7) <== Deep-dive into syntax
+          </section>
+          <section data-markdown>
+            Thanks!
+          </section>
+        </section>
+        <!--
+# What's not so great about angular 2
+  - libraries will be incompatible with angular 2
+  - angular 2 router has been much promised, but development is currently stopped
+  (and it didn't work when I needed it to)
+  - getting a good preview is hard (api has changed 4 times in the last month)
+  - nested components are no bueno in this version, they do not render well
+-->
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
